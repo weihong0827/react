@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>index</title>
+    <script type = 'text/javascript' src = 'bower_components/react/react.js'></script>
+    <script type = 'text/javascript' src = 'bower_components/react/react-dom.js'></script>
+    <script type = 'text/javascript' src = 'bower_components/babel/browser.js'></script>
+    <style>
+        .test{color:red;}    
+    </style>
+</head>
+
+<body>
+    <div id='root'>
+
+    </div>
+    
+    <script type= 'text/babel'>
+        var b = 'test'
+
+        let a = <div>
+
+                    <input/>
+                    <h1 className = {b} style = {{'background':'black'}}>hello World</h1>   
+                    
+                </div>
+        ReactDOM.render(a,document.getElementById('root'))
+    </script>
+    
+</body>
