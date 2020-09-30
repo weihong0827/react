@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+    <title>index</title>
+    <script type = 'text/javascript' src = 'bower_components/react/react.js'></script>
+    <script type = 'text/javascript' src = 'bower_components/react/react-dom.js'></script>
+    <script type = 'text/javascript' src = 'bower_components/babel/browser.js'></script>
+    
+</head>
+
+<body>
+    <div id='root'>
+
+    </div>
+   
+    <!--
+    <script>
+        // OOP in JS    
+       class test{
+           constructor(name,age){            //like __init__ in python
+                this.abc = 'abc'
+                this.name = name             //'this' like 'self' in python
+                this.age = age
+                this.xyz = 'xyz'
+           }
+           show(){
+               console.log(this.name,this.age)
+           }
+           print(){
+               console.log(1)
+           }
+       }
+
+       class test2 extends test{        //inheritance of the class
+            constructor(...val){        // '...val' inherit all the parameters input into the function
+                super(...val);
+                this.xyz = 'abc'
+            }
+            print(){
+                console.log(this.abc,this.xyz)   //inherit the variables declared in the parent class and overide the function
+            }
+       }
+       new test2().print()
+       //new test('weihong',19).show()
+        
+    </script>
+-->
+<script type = 'text/babel'>
+class Abc extends React.Component{ 
+    constructor(){
+        super();
+        /*state is somehting that is writable if not just pass in variable can only be read only*/
+        this.state = {
+            msg : 'hello world'
+        }
+    }
+    render(){
+        console.log(this)/*bind to assign 'this' to the function change*/
+        return (<div>123
+                    <input type='button' value = 'test' onClick = {this.change.bind(this)}/>  
+                    <span>{this.state.msg}</span>
+                </div>)
+    };
+
+    change(){
+        this.setState (   /*set the state value*/
+            {
+                msg:'abc'
+            }
+        )
+    };
+}
+ReactDOM.render(<Abc a ='12' b= '341'/>,root)
+</script>
+    
+</body>

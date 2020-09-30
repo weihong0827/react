@@ -16,11 +16,11 @@
     
     <script type= 'text/babel'>
         var b = 'test'
-
+        function show(){alert(1)}
         let a = <div>
 
                     <input/>
-                    <h1 className = {b} style = {{'background':'black'}}>hello World</h1>   
+                    <h1 className = {b} style = {{'background':'black'}} onClick = {show} >hello World</h1>   
                     
                 </div>
         ReactDOM.render(a,document.getElementById('root'))
